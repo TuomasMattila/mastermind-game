@@ -32,7 +32,6 @@ h2#win-text {
 }
 
 #gameboard {
-    max-width: 100%;
     background-color: var(--gameboard-background-clr);
     padding: 2vmin;
     display: grid;
@@ -55,8 +54,8 @@ h2#win-text {
 
 .result {
     display: grid;
-    grid-template-columns: repeat(2, 5vmin);
-    grid-template-rows: repeat(2, 5vmin);
+    grid-template-columns: repeat(2, 10vmin);
+    grid-template-rows: repeat(2, 10vmin);
     gap: 2vmin;
 }
 
@@ -67,8 +66,8 @@ h2#win-text {
 }
 
 .dot {
-    width: 5vmin;
-    height: 5vmin;
+    width: 10vmin;
+    height: 10vmin;
     background-color: var(--background-clr);
     border-radius: 50%;
     align-self: center;
