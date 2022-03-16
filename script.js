@@ -1,5 +1,6 @@
 const button = document.getElementById("submit-button");
 const gameboard = document.getElementById("gameboard");
+const winText = document.getElementById("win-text");
 const colors = ["red", "green", "blue", "orange", "yellow"];
 let correctAnswer = ["yellow", "red", "orange", "blue"];
 
@@ -15,7 +16,8 @@ guessDots.forEach(element => {
     });
 });
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (e) => {
+    e.preventDefault();
     checkAnswer();
 })
 
@@ -57,7 +59,7 @@ function checkAnswer() {
         hintDots.forEach(hint => {
             hint.style.backgroundColor = "black";
         });
-        console.log("YOU WIN!");
+        winText.style.display = "block";
     } else {
         addNewRow(correct, correctColor);
     }

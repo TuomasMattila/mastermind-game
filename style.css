@@ -16,6 +16,11 @@ h1 {
     margin: 2vmin;
 }
 
+h2#win-text {
+    display: none;
+    margin: 2vmin;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -23,7 +28,7 @@ h1 {
     flex-direction: column;
     text-align: center;
     background-color: var(--background-clr);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #gameboard {
