@@ -1,0 +1,89 @@
+:root {
+    --background-clr: #333;
+    --gameboard-background-clr: #555;
+    --gamerow-background-clr: #777;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    margin: 2vmin;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--background-clr);
+    height: 100vh;
+}
+
+#gameboard {
+    max-width: 100%;
+    background-color: var(--gameboard-background-clr);
+    padding: 2vmin;
+    display: grid;
+    gap: 2vmin;
+    border-radius: 1vmin;
+}
+
+.gamerow {
+    display: flex;
+    background-color: var(--gamerow-background-clr);
+    gap: 2vmin;
+    padding: 2vmin;
+    border-radius: 1vmin;
+}
+
+.gamerow .number {
+    align-self: center;
+    font-size: 3rem;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: repeat(2, 5vmin);
+    grid-template-rows: repeat(2, 5vmin);
+    gap: 2vmin;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    gap: 2vmin;
+}
+
+.dot {
+    width: 5vmin;
+    height: 5vmin;
+    background-color: var(--background-clr);
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+.unselected {
+    cursor: pointer;
+}
+
+#submit-button {
+    font-size: 1.5rem;
+    background-color: darkred;
+    padding: 1vmin;
+    margin: 2vmin;
+    border-radius: 1vmin;
+    border-style: none;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    filter: brightness(1.3);
+}
