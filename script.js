@@ -2,13 +2,12 @@ const button = document.getElementById("submit-button");
 const gameboard = document.getElementById("gameboard");
 const winText = document.getElementById("win-text");
 const colors = ["red", "green", "blue", "orange", "yellow"];
-let correctAnswer = ["yellow", "red", "orange", "blue"];
+let correctAnswer = [];
+setupCorrectAnswer();
 
 // Clickable dots
 let guessDots = document.querySelectorAll(".dot.unselected");
 let hintDots = document.querySelectorAll(".dot.hint");
-
-console.log(document.querySelectorAll(".gamerow"));
 
 guessDots.forEach(element => {
     element.addEventListener("click", () => {
@@ -17,9 +16,8 @@ guessDots.forEach(element => {
 });
 
 button.addEventListener("click", (e) => {
-    e.preventDefault();
     checkAnswer();
-})
+});
 
 function checkAnswer() {
     let guessColors = [];
@@ -51,8 +49,6 @@ function checkAnswer() {
             correctColor--;
         }
     }
-
-    console.log("Correct: " + correct + " Correct color: " + correctColor);
 
     if (correct === 4) {
         button.style.display = "none";
@@ -110,4 +106,10 @@ function addNewRow(blacks, whites) {
         });
     });
 
+}
+
+function setupCorrectAnswer() {
+    for (let i = 0; i < 4; i++) {
+        correctAnswer.push(colors[Math.floor(Math.random() * colors.length)]);
+    }
 }
