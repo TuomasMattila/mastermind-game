@@ -6,7 +6,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     color: white;
@@ -42,7 +42,7 @@ h2#win-text {
 .gamerow {
     display: flex;
     background-color: var(--gamerow-background-clr);
-    gap: 2vmin;
+    gap: 4vmin;
     padding: 2vmin;
     border-radius: 1vmin;
 }
@@ -68,7 +68,7 @@ h2#win-text {
 .dot {
     width: 10vmin;
     height: 10vmin;
-    background-color: var(--background-clr);
+    background-color: var(--gameboard-background-clr);
     border-radius: 50%;
     align-self: center;
     justify-self: center;
