@@ -39,8 +39,12 @@ function checkAnswer() {
     let correct = 0;
     let correctColor = 0;
     for (let i = 0; i < colors.length; i++) {
-        if (guessColors.filter(c => c === colors[i]).length >= correctAnswer.filter(c => c === colors[i]).length) {
-            correctColor += correctAnswer.filter(c => c === colors[i]).length;
+        if (guessColors.includes(colors[i]) && correctAnswer.includes(colors[i])) {
+            if (guessColors.filter(c => c === colors[i]).length >= correctAnswer.filter(c => c === colors[i]).length) {
+                correctColor += correctAnswer.filter(c => c === colors[i]).length;
+            } else {
+                correctColor += guessColors.filter(c => c === colors[i]).length;
+            }
         }
     }
     for (let i = 0; i < 4; i++) {
